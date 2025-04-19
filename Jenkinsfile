@@ -27,6 +27,12 @@ pipeline {
             }
         }
 
+        stage('Cleanup Old Docker Image') {
+            steps {
+                bat 'docker rmi ${DOCKER_IMAGE}:latest || exit 0'  // Removes old image if it exists
+            }
+        }
+
         stage('Docker Build') {
             steps {
                 bat "docker build -t ${DOCKER_IMAGE}:latest ."
