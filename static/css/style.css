@@ -6,11 +6,11 @@ body {
   font-size: 16px; }
 
 ::-moz-selection {
-  background: #1111;
+  background: #7c9082;
   color: #fff; }
 
 ::selection {
-  background: #1111;
+  background: #7c9082;
   color: #fff; }
 
 a {
